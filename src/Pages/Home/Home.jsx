@@ -1,14 +1,17 @@
-import React from 'react';
-import HeroSection from '../HeroSection/HeroSection';
-import Books from '../Books/Books';
+import React from "react";
+import HeroSection from "../HeroSection/HeroSection";
+import Books from "../Books/Books";
+import { useLoaderData } from "react-router";
 
 const Home = () => {
-    return (
-        <div>
-            <HeroSection></HeroSection>
-            <Books></Books>
-        </div>
-    );
+   const bookData = useLoaderData();
+    console.log(bookData)
+  return (
+    <div>
+      <HeroSection></HeroSection>
+      <Books></Books>
+    </div>
+  );
 };
 
 export default Home;

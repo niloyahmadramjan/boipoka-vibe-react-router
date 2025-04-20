@@ -1,9 +1,9 @@
 import React from "react";
-import book from '../../assets/books.jpg';
+import book from '../../assets/pngwing 1.png';
 
 const HeroSection = () => {
   return (
-    <div className="bg-gray-50 rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between">
+    <div className="bg-gray-50 my-20 rounded-2xl p-10 flex flex-col-reverse gap-8 md:flex-row items-center justify-between">
       {/* Text Section */}
       <div className="text-center md:text-left mb-8 md:mb-0">
         <h1 className="text-4xl font-bold text-gray-900 leading-snug">
@@ -19,7 +19,7 @@ const HeroSection = () => {
         <img
           src={book}
           alt="Book cover"
-          className="max-w-xs md:max-w-sm"
+          className="max-w-sm"
         />
       </div>
     </div>
