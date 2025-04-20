@@ -4,12 +4,12 @@ import Books from "../Books/Books";
 import { useLoaderData } from "react-router";
 
 const Home = () => {
-   const bookData = useLoaderData();
-    console.log(bookData)
+  const booksData = useLoaderData();
+   
   return (
     <div>
       <HeroSection></HeroSection>
-      <Books></Books>
+      <Books booksData={booksData}></Books>
     </div>
   );
 };

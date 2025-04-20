@@ -1,14 +1,15 @@
 import React from "react";
+import { Link, Links, NavLink } from "react-router";
 
 const Book = ({ book }) => {
-  const { bookName, author, image, tags } = book;
+  const { bookId,bookName, author, image, tags } = book;
+  
 
   return (
-    <div>
-      <div className="flex items-center mb-5 justify-center">
+    <> <NavLink to={`/booksDetailts/${bookId}`}>
+    <div className="flex items-center mb-5 justify-center">
         <img src={image} alt="Book cover" className="w-40 object-contain" />
       </div>
-      {/* Tags */}
       <section className="flex items-center justify-center">
         <div>
           <div className="flex gap-2 mb-3">
@@ -50,7 +51,8 @@ const Book = ({ book }) => {
           </div>
         </div>
       </section>
-    </div>
+      </NavLink>
+      </>
   );
 };
 

@@ -1,13 +1,13 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React from "react";
 import Book from "./Book";
 
-const Books = () => {
-  const [allBooks, setAllBooks] = useState([]);
-  useEffect(() => {
-    fetch("booksData.json")
-      .then((res) => res.json())
-      .then((data) => setAllBooks(data));
-  }, []);
+const Books = ({booksData}) => {
+  // const [booksData, setBooksData] = useState([]);
+  // useEffect(() => {
+  //   fetch("booksData.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setAllBooks(data));
+  // }, []);
 
   return (
     <div>
@@ -17,7 +17,7 @@ const Books = () => {
         </div>
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ">
           {
-          allBooks.map((book) => (
+          booksData.map((book) => (
             <Book book={book} key={book.bookId}></Book>
           ))}
         </section>
